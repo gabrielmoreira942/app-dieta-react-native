@@ -1,22 +1,25 @@
 import { View, Text, StyleSheet, Image, Pressable } from "react-native";
 import { colors } from "@/constants/colors";
+import { Link } from "expo-router";
 export default function Index() {
   return (
     <View
-    style={styles.container}
+      style={styles.container}
     >
       <Image
         source={require("../assets/images/logo.png")}
       />
       <Text style={styles.title}>
-        Dieta<Text style={{color: colors.white}}>.AI</Text>
+        Dieta<Text style={{ color: colors.white }}>.AI</Text>
       </Text>
       <Text style={styles.text}>
         Sua dieta personalizada com inteligência artificial
       </Text>
-      <Pressable style={styles.button}>
-        <Text style={styles.buttonText}>Gerar dieta</Text>
-      </Pressable>
+      <Link href="/step" asChild>
+        <Pressable style={styles.button}>
+          <Text style={styles.buttonText}>Gerar dieta</Text>
+        </Pressable>
+      </Link>
     </View>
   )
 

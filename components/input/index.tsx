@@ -3,12 +3,12 @@ import { Controller } from 'react-hook-form';
 import { colors } from '@/constants/colors';
 
 interface InputProps {
-  name: string
-  control: any
-  rules?: object
-  placeholder?: string
-  error?: string
-  keyboardType: KeyboardTypeOptions
+  name: string;
+  control: any;
+  rules?: object;
+  placeholder?: string;
+  error?: string;
+  keyboardType: KeyboardTypeOptions;
 }
 export function Input({ name, control, rules, placeholder, error, keyboardType }: InputProps) {
   return (
@@ -20,9 +20,9 @@ export function Input({ name, control, rules, placeholder, error, keyboardType }
         render={({ field: { onChange, onBlur, value } }) => (
           <TextInput
             style={styles.input}
-            value={value}
-            onBlur={onBlur}
             placeholder={placeholder}
+            onBlur={onBlur}
+            value={value}
             onChangeText={onChange}
             keyboardType={keyboardType}
           ></TextInput>
@@ -43,7 +43,6 @@ const styles = StyleSheet.create({
     backgroundColor: colors.white,
     padding: 12,
     borderRadius: 4,
-    borderWidth: 1,
   },
   errorText: {
     color: 'red',
